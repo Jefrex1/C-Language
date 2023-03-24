@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int o, d, t, c, p, result;
+    printf("Vvedit 5 chysel:");
+    scanf(" %d, ", &o);
+    scanf(" %d, ", &d);
+    scanf(" %d, ", &t);
+    scanf(" %d, ", &c);
+    scanf(" %d, ", &p);
+    result = (o + d + t + c + p) / 5;
+    printf("%d", result);
+    
+    return 0;
+}
