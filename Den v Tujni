@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int chyslo;
+    printf("Vvedit chyslo tuznya: ");
+    scanf("%d", &chyslo);
+    if (chyslo <= 5) {
+        printf("Robocyi den");
+    }
+    else if (chyslo == 6) {
+        printf("Subota");
+    }
+    else if (chyslo == 7) {
+        printf("Nedila");
+    }
+
+    return 0;
+}
