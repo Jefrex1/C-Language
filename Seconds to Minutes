@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    float seconds, minutes, hours, dija;
+    printf("Vvedit seconds: ");
+    scanf("%f", &seconds);
+    printf("Vuberit dijy:\nMinutes - 1\nHours- 2:\n");
+    scanf("%f", &dija);
+    if (dija == 1) {
+        minutes = seconds / 60;
+        printf("%f", minutes);
+    }
+     else (dija == 2); {
+        hours = seconds / 3600;
+        printf("%f", hours);
+    }
+
+    return 0;
+}
