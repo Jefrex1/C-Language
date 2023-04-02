@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int chyslo, chyslo1, i;
+    chyslo = 97;
+    for (i = 0; i < 5; i++) {
+        printf("Vgadaite chyslo: ");
+        scanf("%d", &chyslo1);
+        if (chyslo1 > chyslo) 
+            printf("Vashe chyslo bilshe\n");
+        if (chyslo1 < chyslo)
+            printf("Vashe chyslo menshe\n");
+        if (chyslo1 == chyslo)
+            printf("Vi vgadali chyslo ");
+    }
+
+    return 0;
+}
