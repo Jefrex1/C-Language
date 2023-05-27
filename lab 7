@@ -2,12 +2,12 @@
 
 int main() {
     int x, y;
-    printf("Введіть кількість рядків: ");
+    printf("Vvedit kilkist radkiv: ");
     scanf("%d", &x);
-    printf("Введіть кількість стовпців: ");
+   printf("Vvedit kilkist stovpciv: ");
     scanf("%d", &y);
     int arr[x][y];
-    printf("Введіть елементи масиву:\n");
+    printf("Vvedit elementu masuvy:\n");
     for (int i = 0; i < x; i++) {
         for (int j = 0; j < y; j++) {
             scanf("%d", &arr[i][j]);
@@ -20,6 +20,6 @@ int main() {
         }
     }
     float avg = (float) sum / (x * y);
-    printf("Середнє арифметичне елементів масиву: %.2f\n", avg);
+    printf("Seredne arefmetuchne masuvy: %.2f\n", avg);
     return 0;
 }
