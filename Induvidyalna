@@ -1,0 +1,133 @@
+from tkinter import *
+from tkinter.ttk import *
+
+root = Tk()
+root.title("Індивідуальна")
+root.geometry("300x100+500+300")
+root.resizable(False, False)
+
+L = ("В вас включається ПК?"), ("В вас підключаються девайси?"), ("Чи нема проблем з швидкістю?"), (
+    "Чи нема проблем з звуком?"), ()
+List = []
+l = Label(text=L[0])
+l.pack()
+aa = 0
+
+
+def listp():
+    answerT(0)
+
+
+def listm():
+    answerN(1)
+
+
+def answerT(a):
+    if a == 0:
+        List.append(1)
+        print(List)
+        global aa
+        aa += 1
+        l.config(text=L[aa])
+        if len(List) == 4:
+            print("Працює")
+            answer(List)
+
+
+def answerN(b):
+    if b == 1:
+        List.append(2)
+        print(List)
+        global aa
+        aa += 1
+        l.config(text=L[aa])
+        if len(List) == 4:
+            print("Працює")
+            answer(List)
+
+
+def new_window(q):
+    newW = Toplevel(root)
+    newW.title("Індивідуальна")
+    newW.geometry("250x100+500+300")
+    newW.resizable(False, False)
+
+    ANSWER = Label(newW, text=q)
+    ANSWER.place(x=90, y=35)
+    ANSWER.mainloop()
+
+
+def answer(bb):
+    if bb[0] == 1:
+        if bb[1] == 1:
+            if bb[2] == 1:
+                if bb[3] == 1:
+                    print("1")
+                    new_window('В вас все добре')
+                else:
+                    print("2")
+                    new_window('Встановіть драйвера')
+            else:
+                if bb[3] == 1:
+                    print("3")
+                    new_window('Поміняйте термопасту')
+                else:
+                    print("4")
+                    new_window('Перевірте материнку')
+        else:
+            if bb[2] == 1:
+                if bb[3] == 1:
+                    print("5")
+                    new_window('Перевірте ЮСБ порт')
+                else:
+                    print("6")
+                    new_window('Перевірте материнку')
+            else:
+                if bb[3] == 1:
+                    print("7")
+                    new_window('Я хз')
+                else:
+                    print("8")
+                    new_window('Поміняй материнку')
+
+
+    else:
+        if bb[1] == 1:
+            if bb[2] == 1:
+                if bb[3] == 1:
+                    print("9")
+                    new_window('Як в вас з виключеним\n компом всьо працює 0_0')
+                else:
+                    print("10")
+                    new_window('Які проблеми з звуком\n з виключеним компом 0_0')
+            else:
+                if bb[3] == 1:
+                    print("11")
+                    new_window('Які проблеми з швидкістю\n з виключеним компом 0_0')
+                else:
+                    print("12")
+                    new_window('Які проблеми з швидкісю\n і звуком з виключеним\n компом 0_0')
+        else:
+            if bb[2] == 1:
+                if bb[3] == 1:
+                    print("13")
+                    new_window('Які проблеми з ЮСБ\n з виключеним компом 0_0')
+                else:
+                    print("14")
+                    new_window('Які проблеми з ЮСБ\n і звуком з виключеним\n компом 0_0')
+            else:
+                if bb[3] == 1:
+                    print("15")
+                    new_window('Які проблеми з швидкісю\n і ЮСБ з виключеним\n компом 0_0')
+                else:
+                    print("16")
+                    new_window('Купіть новий комп')
+
+
+b1 = Button(root, text="Так", command=listp)
+b1.place(x=60, y=50)
+
+b2 = Button(root, text="Ні", command=listm)
+b2.place(x=160, y=50)
+
+root.mainloop()
